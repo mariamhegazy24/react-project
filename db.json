@@ -1,0 +1,72 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "The Quantum Leap in Computing",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo conseq ",
+      "image": "ai1.jpg",
+      "author": "Raj Patel",
+      "authorimg": "pic6.jpg"
+    },
+    {
+      "id": 2,
+      "title": "The Ethical Dilemmas of AI",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "ai2.jpg",
+      "author": "Sarah Thompson",
+      "authorimg": "pic7.jpg"
+    },
+    {
+      "id": 3,
+      "title": "The Mars Colonization Challenge",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "ai3.jpg",
+      "author": "Diego Lopez",
+      "authorimg": "pic8.jpg"
+    }
+  ],
+  "users": [
+    {
+      "email": "mariam@test.com",
+      "password": "Pass1234",
+      "name": "Mariam",
+      "id": 1
+    },
+    {
+      "email": "ahmed@test.com",
+      "password": "$2a$10$7bjpicjldN1S.8eXkCLI2.BdA7jKPxQ1tvWu1eCLrewjRw5aGthVK",
+      "name": "Ahmed",
+      "id": 2
+    },
+    {
+      "email": "mariamhegazy24@gmail.com",
+      "password": "$2a$10$lunbeP.uf4N2GkOXxAOku.j1rHSlysFgn9JjHgPUlPUrOId.81wWm",
+      "id": 3
+    },
+    {
+      "email": "aser@gmail.com",
+      "password": "$2a$10$ypurUTh7e1kJzpzyK6a0FuJreMJZnzH3H/n/kqf3JKo0w56a6DLgi",
+      "id": 4
+    },
+    {
+      "email": "omar@gmail.com",
+      "password": "$2a$10$87UtI31GQ7spmZYSVmlezO3KPxrC.YvNhxz6ySdMr/wNwsH.NIaRu",
+      "name": "omar",
+      "id": 5
+    },
+    {
+      "email": "ramy@gmail.com",
+      "password": "$2a$10$agee2dcyh2mdd1u9j5a9quRPqUvcok19jkYquY1Lhy8IriwSvXiLC",
+      "name": "Ramy Ahmed",
+      "imgURL": "https://i.ibb.co/1fCrkK4c/close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray.jpg",
+      "id": 6
+    },
+    {
+      "email": "mariam@gmail.com",
+      "password": "$2a$10$aLFqaeosCzZdU4FjW/7yUuB6b6xTPPqmn2i4L5u.x/uydQCjzu4ta",
+      "name": "mariam",
+      "imgURL": "https://i.ibb.co/s9KPcGVk/1615ce40b73cccb1fae47de644c0cbc8.jpg",
+      "id": 7
+    }
+  ]
+}

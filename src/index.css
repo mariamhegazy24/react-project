@@ -1,0 +1,47 @@
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root{
+
+
+    background-color: rgb(20, 20, 20);
+}
+
+
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.slow-spin {
+  animation: slow-spin 4s linear infinite; 
+}
+
+
+ @keyframes float {
+
+0% {
+
+transform: translateY(0px);
+
+}
+50% {
+
+  transform: translateY(-20px);
+}
+100% {
+
+transform: translateY(0px);
+
+
+}
+ }
+
+ .float {
+
+  animation: float 3s ease-in-out infinite;
+ }
