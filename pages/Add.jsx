@@ -37,7 +37,21 @@ export default function Add(props) {
 
     axios.post("http://localhost:5000/posts", { id: Date.now(), ...newPost })
       .then(res => {
-        alert("Post added successfully!");
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-center",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          }
+        });
+        Toast.fire({
+          icon: "success",
+          title: "Post added successfully"
+        });
         navigate("/");
         props.setPosts(prev => [res.data, ...prev]);
 
@@ -69,7 +83,21 @@ export default function Add(props) {
 
     axios.patch(`http://localhost:5000/posts/${existingPost.id}`, updatedPost)
       .then(res => {
-        alert("Post updated successfully!");
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-center",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          }
+        });
+        Toast.fire({
+          icon: "success",
+          title: "Post updated successfully"
+        });
         const updated = res.data;
         props.setPosts(prev => prev.map(post => post.id === updated.id ? updated : post));
         navigate("/");
@@ -183,7 +211,7 @@ export default function Add(props) {
 
             <div className='mx-2'>
 
-              {existingPost ? <button type="submit" className="bg-green-500  text-balck  my-4 w-full py-2 rounded-lg border-0  hover:bg-green-600 cursor-pointer hover:scale-125">
+              {existingPost ? <button type="submit" className="bg-green-500  text-balck  my-4 w-full py-2 rounded-lg border-0  hover:bg-green-600 cursor-pointer hover:scale-105">
                 Edit post
               </button> : <button type="submit" className=" text-black  my-4 w-full py-2 rounded-lg border-0 hover: scale-105 cursor-pointer hover:scale-110 hover:bg-[rgb(231,190,22)] bg-[rgb(255,209,25)] "
               >

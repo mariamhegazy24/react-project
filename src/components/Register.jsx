@@ -22,6 +22,22 @@ export default function Register({ setUser, setIsLogin }) {
         console.log("Register response:", res.data);
         setUser(res.data.user);
         localStorage.setItem("token", res.data.accessToken);
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          }
+        });
+        Toast.fire({
+          icon: "success",
+          title: "Signed up successfully"
+        });
+
         navigate("/");
       })
       .catch(err => {
@@ -52,7 +68,7 @@ export default function Register({ setUser, setIsLogin }) {
 
 
   return (
-    <div className="flex flex-col items-center shadow-lg rounded-2xl p-8 w-[400px] text-white " style={{ backgroundColor: "rgb(25, 25, 25)" }}>
+    <div className="flex flex-col items-center shadow-lg rounded-2xl p-8 w-[400px] text-white md:mt-10 mb-4" style={{ backgroundColor: "rgb(25, 25, 25)" }}>
       <div className='flex justify-center items-center'>
         <img src='logo2.png' className='w-10 h-10 object-contain slow-spin'></img>
         <h1 className="text-4xl font-bold mb-2 text-white">Register</h1>
@@ -120,15 +136,15 @@ export default function Register({ setUser, setIsLogin }) {
 
         {/* name */}
 
-          <label className="text-sm font-medium text-white mx-2">Full name</label>
+        <label className="text-sm font-medium text-white mx-2">Full name</label>
         <div >
           <input
             type="text"
             required
             placeholder="full name"
             className="input validator text-black border-gray-500 w-full"
-             minLength={3} 
-             maxLength={30} title="Only letters, numbers or dash"
+            minLength={3}
+            maxLength={30} title="Only letters, numbers or dash"
             onChange={(e) => setName(e.target.value)}
           />
           <p className="validator-hint hidden">
@@ -138,7 +154,7 @@ export default function Register({ setUser, setIsLogin }) {
         </div>
 
         {/* Email */}
-          <label className="text-sm font-medium text-white">Email</label>
+        <label className="text-sm font-medium text-white">Email</label>
         <div >
           <input
             type="email"
@@ -151,21 +167,21 @@ export default function Register({ setUser, setIsLogin }) {
         </div>
 
         {/* Password */}
-          <label className="text-sm font-medium text-white">Password</label>
+        <label className="text-sm font-medium text-white">Password</label>
         <div >
           <input
             type="password"
             required
             placeholder="Enter your password"
-            minLength={5}
+            minLength={8}
             className="input validator text-black border-gray-500 w-full"
             onChange={(e) => setPassword(e.target.value)}
           />
           <p className="validator-hint hidden">
             Must be more than 8 characters, including
-            <br />At least one number
-            <br />At least one lowercase letter
-            <br />At least one uppercase letter
+            At least one number,
+            At least one lowercase letter,
+            At least one uppercase letter
           </p>
         </div>
 

@@ -14,10 +14,17 @@ export default function Login({ setUser }) {
 
   return (
     <>
+{/* flex flex-col-reverse md:flex-row  justify-center  h-screen gap-0 md:mx-60 mx-10 my-10 md:my-0   */}
 
-      <div className=" flex flex-col-reverse md:flex-row  justify-center  h-screen gap-0 md:mx-60 mx-10 my-10 md:my-0  ">
+      <div className=" 
+flex flex-col-reverse md:flex-row 
+    justify-center items-center 
+    min-h-screen 
+    gap-0 
+    mx-5 md:mx-40 
+    my-10 md:my-0">
 
-        <div className="w-full md:w-1/2 flex justify-center items-center my-20">
+        <div className="w-full md:w-1/2 flex justify-center items-center my-10 md:my-20">
           {isLogin ? <Loginform setUser={setUser} setIsLogin={setIsLogin} /> : <Register setUser={setUser} setIsLogin={setIsLogin} />}
 
         </div>
@@ -26,10 +33,11 @@ export default function Login({ setUser }) {
 
         {/* image */}
 
-        <div className="w-full md:w-1/2 flex justify-center items-center md:p-0 " >
+        <div className="w-full md:w-1/2 flex justify-center items-center md:p-0  mb-8 md:mb-0" >
 
 
-          <img src="laptop.png" alt="auth" className=" object-cover shadow-lg float" />
+          <img src="laptop.png" alt="auth" className=" object-cover shadow-lg float      w-3/4  md:w-full 
+        max-h-[350px] md:max-h-[500px] " />
 
 
         </div>

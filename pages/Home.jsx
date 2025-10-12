@@ -15,13 +15,40 @@ export default function Home(props) {
   const navigate = useNavigate();
 
   const handleDelete = (id) => {
-    if (window.confirm("Are you sure you want to delete this post?")) {
-      axios.delete(`http://localhost:5000/posts/${id}`)
-        .then(() => {
-          props.setPosts(prev => prev.filter(post => post.id !== id));
-        })
-        .catch(err => console.error(err));
-    }
+   
+    Swal.fire({
+      title: "Are you sure?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#facc15",
+      confirmButtonText: "Yes, delete it!",
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios.delete(`http://localhost:5000/posts/${id}`)
+          .then(() => {
+            props.setPosts(prev => prev.filter(post => post.id !== id));
+
+
+            Swal.fire({
+              title: "Deleted!",
+              text: "The post has been deleted successfully.",
+              icon: "success",
+              confirmButtonColor: "#ffd119",
+            });
+          })
+          .catch(() => {
+            Swal.fire({
+              title: "Error!",
+              text: "Something went wrong while deleting the post.",
+              icon: "error",
+            });
+          });
+      }
+    });
+
+
   };
 
 
@@ -33,15 +60,19 @@ export default function Home(props) {
 
         {/* hero section [header and logo ] */}
 
-        <div className='mx-20 my-10 flex flex-col text-white'>
+        <div className='mx-5 md:mx-20 my-10 flex flex-col text-white'>
 
 
 
-          <div className="flex items-center justify-center gap-12 px-10 py-10 my-5" >
+          <div className="flex flex-col-reverse md:flex-row 
+                          items-center justify-center 
+                          gap-8 md:gap-12 
+                          px-5 md:px-10 py-10 md:my-5 mt-0" >
+
             <img className="w-72 h-72 object-contain rounded-lg slow-spin" src='logo2.png'></img>
 
 
-            <div className="flex flex-col items-start justify-center text-left max-w-2xl"
+            <div className="flex flex-col md:items-start items-center justify-center md:text-left text-center max-w-2xl"
 
 
             >

@@ -25,7 +25,7 @@ const [posts, setPosts] = useState([]);
   return (
     <>
 
-  <Navbar user={user}/>
+  <Navbar user={user} setUser= {setUser}/>
   <Routes>
    <Route 
     path="/" 
