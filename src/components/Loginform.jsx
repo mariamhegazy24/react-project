@@ -19,7 +19,13 @@ export default function Loginform({ setUser, setIsLogin }) {
         localStorage.setItem("token", res.data.accessToken);
         navigate("/");
       })
-      .catch(err => alert("Email or password incorrect"));
+      .catch(err => Swal.fire({
+        title: "Login Failed",
+        text: "Incorrect email or password.",
+        icon: "error",
+        confirmButtonText: "Try again",
+        confirmButtonColor: "#d33",
+      }) );
   };
 
 
@@ -27,7 +33,7 @@ export default function Loginform({ setUser, setIsLogin }) {
   return (
     <>
       {/* form */}
-      <div className="flex flex-col items-center shadow-lg rounded-2xl p-8 w-[400px] " style={{ backgroundColor: "rgb(25, 25, 25)" }}>
+      <div className="flex flex-col items-center shadow-lg rounded-2xl p-8 w-[400px]  " style={{ backgroundColor: "rgb(25, 25, 25)" }}>
 
         <div className='flex justify-center items-center'>
           <img src='logo2.png' className='w-10 h-10 object-contain slow-spin'></img>

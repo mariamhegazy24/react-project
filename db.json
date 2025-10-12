@@ -67,6 +67,20 @@
       "name": "mariam",
       "imgURL": "https://i.ibb.co/s9KPcGVk/1615ce40b73cccb1fae47de644c0cbc8.jpg",
       "id": 7
+    },
+    {
+      "email": "sara@gmail.com",
+      "password": "$2a$10$yXKU6Q/7P8qOr9EoPVjKuOBrr0eblHml877ZzTsSE6cQ1tA7yd2xm",
+      "name": "Sara Ahmed ",
+      "imgURL": null,
+      "id": 8
+    },
+    {
+      "email": "mariamhegazy@gmail.com",
+      "password": "$2a$10$P1tMHGVW3GML7ABdbDy8rOxIr0dqNll7mTqQaf6VTr/ahyXMR1gXC",
+      "name": "Mariam Hegazy",
+      "imgURL": "https://i.ibb.co/KcgH1WKF/pic10.jpg",
+      "id": 9
     }
   ]
 }
