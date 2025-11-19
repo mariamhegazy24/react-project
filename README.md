@@ -8,12 +8,8 @@ Authentication and backend are powered by **json-server** and **json-server-auth
 
 ## 🎥 Demo Video
 
-> Replace this link with your own demo video
-
 📹 **Demo:**
-<video width="600" controls>
-  <source src="public/blog-app.mp4">
-</video>
+assets/blog-app.mp4
 
 
 ---
