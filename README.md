@@ -19,7 +19,6 @@ https://drive.google.com/file/d/1M7qR_ngw79uejTcfch6vJNjBS2KTK-pW/view?usp=shari
 * Create new posts
 * Edit existing posts
 * **Delete posts**
-* Publish / Unpublish
 * User authentication (Login / Register)
 * Mock backend using json-server & json-server-auth
 
